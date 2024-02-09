@@ -1,0 +1,22 @@
+<!-- <h6>Your Items</h6> -->
+<table class="table">
+  <tbody>
+    <tr>
+      <th scope="row">
+        
+        <span class="bullet">&#8226;</span>
+      
+
+      </th>
+      <td class="col-4" [ngClass]="{'strike': !todo.activeStatus}">{{todo.title}}</td>
+  <td class="col-4" [ngClass]="{'strike': !todo.activeStatus}">{{todo.description}}</td>
+  <td class="col-4">
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-danger me-2 btn-sm" type="button" (click)="deleteItem(todo)">Delete</button>
+      <button class="btn btn-success btn-sm" type="button" (click)="markAsDone(todo)">Mark as done</button>
+    </div>
+  </td>
+    </tr>
+    
+  </tbody>
+</table>

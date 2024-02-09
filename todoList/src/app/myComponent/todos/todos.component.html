@@ -1,0 +1,13 @@
+<h2 class="text-center mt-4">Todo List</h2>
+<app-new-todo (todoAdd)="addTodo($event)"></app-new-todo>
+<h6 class=" mt-4">Your Items</h6>
+
+<div *ngIf="this.todos.length===0; else elseBlock">No items to display</div>
+<ng-template #elseBlock>
+        <div *ngFor="let todo of todos">
+                <app-todo-item [todo]="todo" (todoDelete)="deleteTodoObjFromArray($event)" (todoCheckbox)="toggleStrike($event)"></app-todo-item>
+        </div>
+</ng-template>
+
+<!-- todoDelete is our custom event -->
+<!-- deleteTodoObjFromArray is the function it envokes -->

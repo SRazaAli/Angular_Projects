@@ -1,0 +1,13 @@
+<div class="mb-4">
+    <form (ngSubmit) = "onSubmit()">
+        <label for="title" class="form-label ms-1">Add new item</label>
+    <input type="text" class="form-control " id="title" name="title" placeholder="Title" [(ngModel)]="title">
+   
+    <textarea class="form-control mt-2" id="description" name="description" rows="3" placeholder="Description" [(ngModel)]="description"></textarea>
+        <button class="btn btn-secondary mt-2 mb-4 btn-sm float-end">Add Item</button>
+    </form>
+
+    
+  </div>
+ 
+ 
